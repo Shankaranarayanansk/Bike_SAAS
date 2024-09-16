@@ -1,0 +1,151 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom styles */
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-gray-100 text-gray-900;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+
+.container {
+  @apply px-4 mx-auto;
+  max-width: 1200px;
+}
+
+/* Button styles */
+.btn {
+  @apply font-bold py-2 px-4 rounded transition duration-200;
+}
+
+.btn-primary {
+  @apply bg-blue-500 text-white;
+}
+
+.btn-primary:hover {
+  @apply bg-blue-600;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800;
+}
+
+.btn-secondary:hover {
+  @apply bg-gray-300;
+}
+
+/* Form styles */
+.form-input {
+  @apply w-full p-2 border rounded;
+}
+
+.form-label {
+  @apply block mb-2 font-semibold;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden;
+}
+
+.card-header {
+  @apply bg-gray-100 p-4 border-b;
+}
+
+.card-body {
+  @apply p-4;
+}
+
+/* Navigation styles */
+.nav-link {
+  @apply text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium;
+}
+
+.nav-link-active {
+  @apply bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium;
+}
+
+/* Responsive table */
+.responsive-table {
+  @apply w-full overflow-x-auto;
+}
+
+.responsive-table table {
+  @apply min-w-full divide-y divide-gray-200;
+}
+
+.responsive-table th {
+  @apply px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.responsive-table td {
+  @apply px-6 py-4 whitespace-nowrap;
+}
+
+/* Alert styles */
+.alert {
+  @apply p-4 mb-4 rounded;
+}
+
+.alert-success {
+  @apply bg-green-100 text-green-700;
+}
+
+.alert-error {
+  @apply bg-red-100 text-red-700;
+}
+
+.alert-warning {
+  @apply bg-yellow-100 text-yellow-700;
+}
+
+.alert-info {
+  @apply bg-blue-100 text-blue-700;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive utilities */
+@screen sm {
+  .container {
+    @apply px-6;
+  }
+}
+
+@screen md {
+  .container {
+    @apply px-8;
+  }
+}
+
+@screen lg {
+  .container {
+    @apply px-10;
+  }
+}
+
+/* Add this to your globals.css file */
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: white;
+    opacity: 0.5;
+  }
+  
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #3B82F6; /* Tailwind blue-500 */
+  }
