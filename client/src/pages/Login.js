@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../components/Layout';
 import { useAuth } from '../hooks/useAuth';
@@ -6,8 +6,14 @@ import { useAuth } from '../hooks/useAuth';
 const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
-  const { login } = useAuth();
+  const { login, isAuthenticated } = useAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/');
+    }
+  }, [isAuthenticated, navigate]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,7 +24,7 @@ const Login = () => {
     setError('');
     try {
       await login(formData);
-      navigate('/');
+      navigate('/'); // Immediately redirect to home page after successful login
     } catch (error) {
       console.error('Login error:', error);
       setError('Invalid email or password. Please try again.');
