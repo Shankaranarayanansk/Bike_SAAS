@@ -41,3 +41,20 @@ exports.deleteService = async (req, res) => {
     res.status(400).json({ success: false, error: error.message });
   }
 };
+
+exports.toggleServiceAvailability = async (req, res, next) => {
+  try {
+    const service = await Service.findById(req.params.id);
+
+    if (!service) {
+      return res.status(404).json({ success: false, error: 'Service not found' });
+    }
+
+    service.isAvailable = !service.isAvailable;
+    await service.save();
+
+    res.status(200).json({ success: true, data: service });
+  } catch (error) {
+    res.status(400).json({ success: false, error: error.message });
+  }
+};

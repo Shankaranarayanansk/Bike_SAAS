@@ -17,6 +17,10 @@ const ServiceSchema = new mongoose.Schema({
     type: Number,
     required: [true, 'Please add a price']
   },
+  isAvailable: {
+    type: Boolean,
+    default: true
+  },
   createdAt: {
     type: Date,
     default: Date.now

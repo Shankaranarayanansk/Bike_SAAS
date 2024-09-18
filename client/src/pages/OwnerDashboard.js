@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Layout from '../components/Layout';
 import BookingList from '../components/BookingList';
+import ServiceManagement from '../components/ServiceManagement';
 import { getBookings, updateBookingStatus } from '../services/api';
+import { useEffect,useState } from 'react';
 
 const OwnerDashboard = () => {
   const [bookings, setBookings] = useState([]);
@@ -31,6 +33,7 @@ const OwnerDashboard = () => {
   return (
     <Layout>
       <h1 className="text-3xl font-bold mb-6">Owner Dashboard</h1>
+      <ServiceManagement />
       <BookingList bookings={bookings} isOwner={true} onStatusUpdate={handleStatusUpdate} />
     </Layout>
   );
