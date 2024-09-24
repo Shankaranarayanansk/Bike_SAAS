@@ -9,7 +9,7 @@ import ServiceList from '../components/ServiceList';
 
 const Home = () => {
   const slides = [
-    'https://5.imimg.com/data5/XM/BH/LN/SELLER-38802900/yamaha-bike-repairing-services-500x500.png',
+    'https://asistosindia.com/images/banners/bike-repair-bangalore.jpg',
     ' https://mybikeclinic.com/img/carousel-bg-2.jpg',
     'https://wallpapers.com/images/featured/4k-bike-p5ztqfie3vnj5kkp.jpg',
   ];
