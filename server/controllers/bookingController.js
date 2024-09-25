@@ -15,6 +15,7 @@ exports.createBooking = async (req, res) => {
   }
 };
 
+
 exports.getBookings = async (req, res) => {
   try {
     const bookings = await Booking.find(req.user.role === 'owner' ? {} : { user: req.user.id }).populate('service');
