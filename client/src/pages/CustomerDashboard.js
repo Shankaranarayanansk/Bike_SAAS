@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import BookingForm from '../components/BookingForm';
 import BookingList from '../components/BookingList';
-import { getServices, getBookings, createBooking } from '../services/api';
+import { getServices, getBookings  } from '../services/api';
 
 const CustomerDashboard = () => {
   const [services, setServices] = useState([]);
