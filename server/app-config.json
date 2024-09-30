@@ -1,0 +1,8 @@
+{
+	"command": "node server.js",
+	"build_path": "C:\\Users\\Admin\\Desktop\\Bike_SAAS\\server",
+	"stack": "node18",
+	"env_variables": {},
+	"memory": 256,
+	"scripts": {}
+}
