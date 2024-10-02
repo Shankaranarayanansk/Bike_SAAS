@@ -9,10 +9,13 @@ const authRoutes = require('./routes/auth');
 const serviceRoutes = require('./routes/services');
 const bookingRoutes = require('./routes/bookings');
 
+
 const app = express();
 
 // Connect to database
 connectDB();
+ 
+
 
 // Middleware
 app.use(cors());
