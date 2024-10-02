@@ -1,6 +1,6 @@
  import axios from "axios";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://appsail-50022507441.development.catalystappsail.in/api";
 
 const api = axios.create({
   baseURL: API_URL,
