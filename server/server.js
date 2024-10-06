@@ -20,7 +20,7 @@ connectDB();
 // Middleware
 app.use(cors(
     {
-        origin:"https://bikesaas-sk.vercel.app/"   
+        origin:"https://bikesaas-sk.vercel.app"   
     }
 ));
 app.use(helmet());
